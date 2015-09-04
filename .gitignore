@@ -1,0 +1,6 @@
+pdfs/
+virt-hrcemail/
+*.sqlite
+*.pyc
+pdflist.txt
+*.zip
