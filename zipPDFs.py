@@ -18,7 +18,7 @@ docClasses = (Document.select(fn.Distinct(Document.documentClass).alias("docClas
 
 for docClass in docClasses:
 	print "working on ",docClass.docClass
-	if not os.path.isfile("zips/"docClass.docClass+".zip"):
+	if not os.path.isfile("zips/"+docClass.docClass+".zip"):
 		with zipfile.ZipFile("zips/"+docClass.docClass+".zip", "w") as zf:
 			docIDs = (Document.select(Document.docID).where(Document.documentClass == docClass.docClass))
 			for docID in docIDs:

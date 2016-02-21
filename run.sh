@@ -4,7 +4,7 @@ mkdir -p zips/
 source virt-hrcemail/bin/activate
 python downloadMetadata.py
 python generatePDFList.py
-if [ $1 = "no-pdf-download" ] 
+if [ "$1" = "no-pdf-download" ] 
 then 
     echo "skipping PDF download"
 else
