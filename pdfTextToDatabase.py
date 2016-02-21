@@ -27,7 +27,7 @@ def extract(filename):
 	except:
 		return None;
 		
-docIDs = Document.select(Document.docID)
+docIDs = Document.select(Document.docID).where(Document.docText >> None)
 
 for docID in docIDs:
 	filename = docID.docID
